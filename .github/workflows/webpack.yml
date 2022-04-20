@@ -30,5 +30,10 @@ jobs:
       run: |
         npm run build
         
-    - name: Clone master branch
-      run: git clone "https://${{ secrets.ACCESS_TOKEN }}@github.com/${GITHUB_ACTOR}/${GITHUB_ACTOR}.github.io.git" --branch master --single-branch ./output
+    - name: Deploy
+      uses: 3nergetik/ghaction-github-pages@v1
+      with:
+        target_branch: gh-pages
+        build_dir: dist
+      env:
+        GITHUB_TOKEN: ${{ secret.GITHUB_REPO_TOKEN }}
