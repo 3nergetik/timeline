@@ -1,0 +1,8 @@
+container:
+  image: node:latest
+
+task:
+  name: Install
+  node_modules_cache:
+    folder: node_modules
+  script: npm install
