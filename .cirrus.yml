@@ -6,3 +6,7 @@ task:
   node_modules_cache:
     folder: node_modules
   script: npm install
+
+task:
+  name: Build
+  script: npm run build
