@@ -5,8 +5,5 @@ task:
   name: Install
   node_modules_cache:
     folder: node_modules
-  script: npm install
-
-task:
-  name: Build
+  install_script: npm install
   script: npm run build
