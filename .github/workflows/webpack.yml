@@ -30,9 +30,5 @@ jobs:
       run: |
         npm run build
         
-    - name: Making directory
-      run: |
-        mkdir dist
-        
     - name: Clone master branch
       run: git clone "https://${{ secrets.ACCESS_TOKEN }}@github.com/${GITHUB_ACTOR}/${GITHUB_ACTOR}.github.io.git" --branch master --single-branch ./output
